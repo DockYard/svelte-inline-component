@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "vite-plugin-svelte-inline-component": "^0.0.1"
+    "vite-plugin-svelte-inline-component": "^0.0.2"
   },
   "author": "Miguel Camba",
   "license": "ISC",
