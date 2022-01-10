@@ -1,0 +1,13 @@
+{
+  "name": "vite-plugin-svelte-inline-component",
+  "version": "0.0.1",
+  "description": "Vite plugin that allows you to define components right inside your tests",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Miguel Camba",
+  "license": "ISC",
+  "keywords": [ "vite-plugin", "rollup-plugin", "svelte", "inline", "component", "tests", "vitest", "vite"]
+}

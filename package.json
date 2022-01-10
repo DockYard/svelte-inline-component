@@ -1,0 +1,9 @@
+{
+  "name": "root",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "packages/svelte-inline-component",
+    "packages/vite-plugin-svelte-inline-component"
+  ]
+}
