@@ -1,6 +1,11 @@
-# vite-plugin-svelte-inline-components
+# svelte-inline-components
 
-This component allows you to define components inline using tagged template in your tests.
+This repo contains two packages that are designed to work together.
+
+- `svelte-inline-component` provides a runtime tagged template helper to define your inline components in your svelte tests.
+- `vite-plugin-svelte-inline-component` is a vite plugin that allows to import the inline components defined with the above utility.
+
+
 Used in conjunction with Vitest, it makes for a far better experience testing sveltekit apps as you can test things that were previously impossible or impractical, like
 components that take blocks or several components that interact with each other, at once.
 
@@ -9,23 +14,23 @@ components that take blocks or several components that interact with each other,
 Assuming you have Vitest already configured, you first have to install the package with:
 
 ```shell
-npm i -D vite-plugin-svelte-inline-components
+npm i -D svelte-inline-components
 ```
 
-The in your `vitest.config.js` add this plugin to the list of plugins:
+The in your `vitest.config.js` import the vite plugin from `vite-plugin-svelte-inline-component` and add it the list of plugins:
 
 ```js
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { sveltekitViteConfig } from './svelte.config.js'
 import path from 'path';
-import svelteInlineComponents from 'vite-plugin-svelte-inline-components';
+import svelteInlineComponent from 'vite-plugin-svelte-inline-component';
 
 export default defineConfig({
   ...sveltekitViteConfig,
   plugins: [
     svelte({ hot: !process.env.VITEST, }),
-    svelteInlineComponents(), // <------ here
+    svelteInlineComponent(), // <------ here
   ],
   test: {
     global: true,
@@ -48,7 +53,7 @@ the `svelte` tagged template and use components as you would in your real app (n
 
 ```js
 import { cleanup, render } from '@testing-library/svelte'
-import { svelte } from 'vite-plugin-svelte-inline-components';
+import svelte from 'svelte-inline-components';
 
 describe('MyComponent.svelte', () => {
   // TODO: @testing-library/svelte claims to add this automatically but it doesn't work without explicit afterEach
@@ -66,3 +71,4 @@ describe('MyComponent.svelte', () => {
   });
 });
 ```
+
