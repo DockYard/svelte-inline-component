@@ -4,6 +4,6 @@ function encodeBase64(str) {
 }
 
 export default async function svelte([code]) {
-  const id = `virtual:inline-svelte:${encodeBase64(code)}.svelte`
+  const id = `@svelte-inline-components:${encodeBase64(code)}.svelte`
   return import(id);
 }
