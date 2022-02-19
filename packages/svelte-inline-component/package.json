@@ -12,5 +12,14 @@
   },
   "author": "Miguel Camba",
   "license": "ISC",
-  "keywords": [ "svelte", "inline", "component", "tests", "vitest" ]
+  "keywords": [ "svelte", "inline", "component", "tests", "vitest" ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DockYard/svelte-inline-component.git",
+    "directory": "packages/svelte-inline-component"
+  },
+  "bugs": {
+    "url": "https://github.com/svelte-inline-component/issues"
+  },
+  "homepage": "https://github.com/svelte-inline-component#readme",
 }
