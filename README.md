@@ -1,4 +1,4 @@
-# svelte-inline-components
+# svelte-inline-component
 
 This repo contains two packages that are designed to work together.
 
@@ -14,7 +14,7 @@ components that take blocks or several components that interact with each other,
 Assuming you have Vitest already configured, you first have to install the package with:
 
 ```shell
-npm i -D svelte-inline-components
+npm i -D svelte-inline-component
 ```
 
 The in your `vitest.config.js` import the vite plugin from `vite-plugin-svelte-inline-component` and add it the list of plugins:
@@ -53,7 +53,7 @@ the `svelte` tagged template and use components as you would in your real app (n
 
 ```js
 import { cleanup, render } from '@testing-library/svelte'
-import svelte from 'svelte-inline-components';
+import svelte from 'svelte-inline-component';
 
 describe('MyComponent.svelte', () => {
   // TODO: @testing-library/svelte claims to add this automatically but it doesn't work without explicit afterEach
