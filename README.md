@@ -33,7 +33,7 @@ export default defineConfig({
     svelteInlineComponent(), // <------ here
   ],
   test: {
-    global: true,
+    globals: true,
     environment: 'jsdom',
   },
   resolve: {
